@@ -4,6 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function insert(num) {
+            document.form.textview.value = document.form.textview.value + num
+        }
+
+        function back() {
+            var exp = document.form.textview.value;
+            document.form.textview.value = exp.substring(0, exp.length - 1);
+        }
+
+        function equal() {
+            var exp = document.form.textview.value;
+            if (exp) {
+                document.form.textview.value = eval(exp);
+            }
+        }
+
+        function clean() {
+            document.form.textview.value = "";
+        }
+    </script>
     <style>
         * {
             padding: 0;
@@ -61,7 +82,7 @@
                         <input class="button" type="button" value="<" onclick="back()">
                     </td>
                     <td>
-                        <input class="button" type="button" value="/" onclick="clean()">
+                        <input class="button" type="button" value="/" onclick="insert('/')">
                     </td>
                     <td>
                         <input class="button" type="button" value="X" onclick="insert('*')">
