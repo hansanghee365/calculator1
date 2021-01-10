@@ -5,9 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
         .bg {
             background: linear-gradient(to right, rgb(228, 84, 84), rgb(78, 78, 248));
             height: 1000px;
+        }
+        
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .textview {
+            width: 203px;
+            margin: 5px;
+            font-size: 25px;
+            padding: 5px;
+            border: none;
+            color: rgb(107, 141, 160);
         }
     </style>
     <title>Calculator</title>
@@ -15,6 +36,11 @@
 
 <body>
     <div class="bg"></div>
+    <div class="main">
+        <form action="" name="form">
+            <input type="text" class="textview" name="textview">
+        </form>
+    </div>
 </body>
 
 </html>
